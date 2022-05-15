@@ -6,7 +6,8 @@ var g int = 10      // 전역변수선언
 
 func main(){
 
-	var m int = 20
+	m := 20
+	
 
 	{
 		var s int = 50
