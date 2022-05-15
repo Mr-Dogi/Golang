@@ -2,15 +2,19 @@ package main
 
 import "fmt"
 
-func ChangeArray(a [5]int){
+func ChangeArray(a *[5]int){
 	a[3] = 3000
 }
 
 func main(){
 
-	a := [5]int{ 1, 2, 3, 4, 5}
+	a := [5]int{ 1, 
+		2, 
+		3, 
+		4, 
+		5 }
 
-	ChangeArray(a)
+	ChangeArray(&a)
 
 	fmt.Println(a[3])
 
