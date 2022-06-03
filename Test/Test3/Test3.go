@@ -7,10 +7,13 @@ func WhatType(a interface{}) {
 	switch a.(type) {
 	case int:
 		fmt.Println(a.(int))
+		fmt.Printf("%T \n", a)
 	case string:
 		fmt.Println(a.(string))
+		fmt.Printf("%T \n", a)
 	case float64:
 		fmt.Println(a.(float64))
+		fmt.Printf("%T \n", a)
 	default:
 		fmt.Println("what the fuck ?")
 	}
@@ -18,7 +21,7 @@ func WhatType(a interface{}) {
 }
 
 func main() {
-	WhatType("1,2,4,5")
+	WhatType(1)
 	WhatType("Hello")
-	WhatType("3.14")
+	WhatType(3.14)
 }
